@@ -19,7 +19,9 @@ public class FelineTest {
     public void doesReturnCorrectListOfFood() throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+
         List<String> actualFood = feline.eatMeat();
+
         Assert.assertEquals(expectedFood, actualFood);
         Mockito.verify(feline).getFood("Хищник");
     }
@@ -27,7 +29,9 @@ public class FelineTest {
     @Test
     public void doesReturnCorrectFamily() {
         String expectedFamily = "Кошачьи";
+
         String actualFamily = feline.getFamily();
+
         Assert.assertEquals(expectedFamily, actualFamily);
     }
 
