@@ -42,7 +42,7 @@ public class LionTest {
     public void lionReturnsCorrectTextException() {
         String message = "В конструкторе Lion(String sex) некорректно отрабатывает исключение";
         String actualException = "";
-        String expectedException = "Используйте допустимые значения пола животного - самец или самка";
+        String expectedException = "Используйте допустимые значения пола животного - самей или самка";
         try {
             new Lion("Мужчина");
         } catch (Exception exception) {
