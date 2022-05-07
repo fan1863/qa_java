@@ -19,9 +19,6 @@ public class CatTest {
     @Mock
     private Feline feline;
 
-    @Spy
-    private Predator predator;
-
     @Test
     public void doesMakeCorrectSound() {
         Cat cat = new Cat (feline);
@@ -35,7 +32,7 @@ public class CatTest {
     @Test
     public void doesReturnCorrectFood() throws Exception {
         Cat cat = new Cat(feline);
-        Mockito.lenient().when(predator.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
 
         List<String> actualFood = cat.getFood();
