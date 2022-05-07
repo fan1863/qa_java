@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 public class CatTest {
 
-    @Spy
+    @Mock
     private Feline feline;
 
     @Spy
